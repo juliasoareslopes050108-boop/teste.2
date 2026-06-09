@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Você 💜</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonte pixel -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- TELA INICIAL -->
+    <div class="container" id="pergunta">
+
+        <h1 class="titulo-pixel">
+            Você me ama? 💜
+        </h1>
+
+        <div class="botoes-inicio">
+
+            <button class="pixel-btn sim"
+                onclick="abrirSurpresa()">
+                SIM
+            </button>
+
+            <button class="pixel-btn nao"
+                id="naoBtn">
+                NÃO
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- HOME -->
+    <div class="container hidden" id="home">
+
+        <h1>Ei amor 💜</h1>
+
+        <p class="subtitulo">
+            Fiz uma coisinha pra você, mozinho...
+        </p>
+
+        <button onclick="abrirMenu()">
+            Abrir surpresa ✨
+        </button>
+
+    </div>
+
+
+    <!-- MENU -->
+    <div class="container hidden" id="menu">
+
+        <h2>Escolha uma surpresa 💜</h2>
+
+        <div class="botoes">
+
+            <button onclick="mostrarMensagem('coisas')">
+                🐱 Detalhes que amo em você
+            </button>
+
+            <button onclick="mostrarMensagem('musica')">
+                🎵 Me lembra de você...
+            </button>
+
+            <button onclick="mostrarMensagem('pokemon')">
+                👾 Se fossemos pokemóns...
+            </button>
+
+            <button onclick="mostrarMensagem('mensagem')">
+                💌 Mensagem secreta
+            </button>
+
+        </div>
+
+        <div class="caixa-mensagem" id="mensagemBox">
+            Clique em algo acima ✨
+        </div>
+
+        <button class="final-btn"
+        onclick="mostrarFinal()">
+            Última surpresa 💜
+        </button>
+
+    </div>
+
+
+    <!-- FINAL -->
+    <div class="container hidden" id="final">
+
+        <h1>💜</h1>
+
+        <p class="texto-final">
+            No meu mundo inteiro,<br>
+            eu escolheria você de novo.<br>
+            Sempre, porque você faz a minha vida muito mais feliz 💜
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

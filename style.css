@@ -1,0 +1,453 @@
+/* ==========================
+RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* ==========================
+BODY
+========================== */
+
+body{
+
+    background:
+    linear-gradient(
+        180deg,
+        #140b24 0%,
+        #35176a 55%,
+        #6d42c8 100%
+    );
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    padding:20px;
+
+    font-family:Arial, sans-serif;
+
+    color:white;
+}
+
+
+/* ==========================
+CONTAINER
+========================== */
+
+.container{
+
+    width:100%;
+    max-width:420px;
+
+    background:
+    rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(10px);
+
+    border:
+    4px solid
+    rgba(170,140,255,.6);
+
+    border-radius:28px;
+
+    padding:28px 22px;
+
+    text-align:center;
+
+    box-shadow:
+    0 0 35px
+    rgba(120,80,255,.25);
+}
+
+.hidden{
+    display:none;
+}
+
+
+/* ==========================
+TÍTULOS
+========================== */
+
+h1,
+h2{
+
+    margin-bottom:15px;
+
+    line-height:1.5;
+}
+
+.subtitulo{
+
+    opacity:.9;
+
+    margin-bottom:20px;
+}
+
+
+/* ==========================
+BOTÕES
+========================== */
+
+button{
+
+    width:100%;
+
+    border:none;
+
+    padding:18px;
+
+    margin-top:14px;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #72b8ff,
+        #5f94ff
+    );
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:
+    0 6px 18px
+    rgba(0,0,0,.2);
+}
+
+button:hover{
+
+    transform:
+    scale(1.03);
+}
+
+
+/* ==========================
+TELA "VOCÊ ME AMA?"
+========================== */
+
+.botoes-inicio{
+
+    position:relative;
+
+    height:180px;
+}
+
+.pixel-btn{
+
+    position:absolute;
+
+    width:120px;
+}
+
+.sim{
+
+    left:20px;
+    top:70px;
+}
+
+.nao{
+
+    right:20px;
+    top:70px;
+}
+
+
+/* ==========================
+CAIXA DE MENSAGEM
+========================== */
+
+.caixa-mensagem{
+
+    margin-top:25px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    padding:20px;
+
+    min-height:220px;
+
+    line-height:1.8;
+}
+
+.mensagem-conteudo{
+
+    animation:
+    fade .4s ease;
+}
+
+
+/* ==========================
+CENA POKÉMON
+========================== */
+
+.pokemon-scene{
+
+    position:relative;
+
+    width:100%;
+    height:240px;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    margin-bottom:15px;
+
+    background:
+    linear-gradient(
+        to top,
+        #6b4eb4 30%,
+        #1f1136 30%
+    );
+}
+
+
+/* brilho */
+
+.pokemon-scene::before{
+
+    content:"✨";
+
+    position:absolute;
+
+    top:20px;
+    left:20px;
+
+    font-size:20px;
+
+    opacity:.7;
+}
+
+
+/* chão */
+
+.pokemon-scene::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+    left:0;
+
+    width:100%;
+    height:55px;
+
+    background:
+    repeating-linear-gradient(
+        90deg,
+        #8ce87a 0px,
+        #8ce87a 18px,
+        #72d05f 18px,
+        #72d05f 36px
+    );
+}
+
+
+/* POKÉMON */
+
+.pokemon{
+
+    position:absolute;
+
+    image-rendering:
+    pixelated;
+
+    z-index:2;
+}
+
+
+/* GENGAR */
+
+.gengar{
+
+    width:96px;
+
+    bottom:42px;
+
+    left:-130px;
+
+    animation:
+    entrarGengar 4s
+    infinite ease-in-out;
+}
+
+
+/* CLEFABLE */
+
+.clefable{
+
+    width:145px;
+
+    bottom: 10px;
+
+    right:-130px;
+
+    animation:
+    entrarClefable 4s
+    infinite ease-in-out;
+}
+
+
+/* CORAÇÃO */
+
+.coracao-pixel{
+
+    position:absolute;
+
+    left:50%;
+    top:42%;
+
+    transform:
+    translate(-50%, -50%);
+
+    font-size:28px;
+
+    opacity:0;
+
+    z-index:5;
+
+    animation:
+    aparecerCoracao
+    4s infinite;
+}
+
+
+/* TEXTO */
+
+.pokemon-texto{
+
+    margin-top:10px;
+
+    line-height:1.8;
+}
+
+
+/* ==========================
+ANIMAÇÕES
+========================== */
+
+@keyframes entrarGengar{
+
+    0%{
+        left:-130px;
+    }
+
+    45%{
+        left:70px;
+    }
+
+    100%{
+        left:85px;
+    }
+}
+
+@keyframes entrarClefable{
+
+    0%{
+        right:-140px;
+    }
+
+    45%{
+        right:55px;
+    }
+
+    100%{
+        right:67px;
+    }
+}
+
+@keyframes aparecerCoracao{
+
+    0%{
+        opacity:0;
+
+        transform:
+        translate(-50%, -50%)
+        scale(0);
+    }
+
+    50%{
+        opacity:1;
+
+        transform:
+        translate(-50%, -50%)
+        scale(1.25);
+    }
+
+    100%{
+        opacity:1;
+
+        transform:
+        translate(-50%, -50%)
+        scale(1);
+    }
+}
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:
+        translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:
+        translateY(0);
+    }
+}
+
+
+/* ==========================
+FINAL
+========================== */
+
+.texto-final{
+
+    font-size:22px;
+
+    line-height:1.8;
+}
+
+
+/* ==========================
+CELULAR
+========================== */
+
+@media(max-width:480px){
+
+    .container{
+        padding:22px 18px;
+    }
+
+    .gengar{
+        width:90px;
+    }
+
+    .clefable{
+        width:135px;
+    }
+}
