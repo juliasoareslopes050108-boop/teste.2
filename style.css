@@ -355,11 +355,11 @@ ANIMAÇÕES
     }
 
     45%{
-        left:60px;
+        left:40px;
     }
 
     100%{
-        left:60px;
+        left:40px;
     }
 }
 
@@ -370,11 +370,11 @@ ANIMAÇÕES
     }
 
     45%{
-        right:50px;
+        right:30px;
     }
 
     100%{
-        right:50px;
+        right:30px;
     }
 }
 
